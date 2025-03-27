@@ -15,10 +15,10 @@
           <nav class="menu">
               <div class="logo">SH</div>
               <ul class="menu__list">
-                  <li>Обо мне</li>
-                  <li>Услуги</li>
-                  <li>Оплатить</li>
-                  <li>Контакты</li>
+                  <li><a href="#about">Обо мне</a></li>
+                  <li><a href="#services">Услуги</a></li>
+                  <li><a href="#pay">Оплатить</a></li>
+                  <li><a href="#footer">Контакты</a></li>
               </ul>
           </nav>
           <div class="header__content">
@@ -27,44 +27,53 @@
           </div>
       </header>
       <main>
-          <section class="about">
+          <section id="about" class="about">
               <img class="about__img" src="src/assets/about.jpg" />
               <div class="about__block">
-                <h2>Ирина Шапкова</h2>
-                <p>Разработка стильных и современных web решений для вашего бизнеса. Основное направление это разработка лэндинга, подобно этому, для вашего бизнеса.</p>
+                <h2 class="about__title">Ирина Шапкова</h2>
+                <div class="about__subtitle">ГЕШТАЛЬТ-ТЕРАПЕВТ, СЕМЕЙНЫЙ ПСИХОЛОГ, СЕКСОЛОГ, КРИЗИСНЫЙ ПСИХОЛОГ</div>
+                <div class="about__list-block">
+                  <div class="about__list-title">Мои услуги включают следующие направления:</div>
+                  <ul class="about__list">
+                    <li>Трудности в установлении отношений (партнерских, детско-родительских, профессиональных и др.)</li>
+                    <li>Переживание ситуаций потери: смерть близкого человека, развод, расставание с выросшими детьми, потеря работы</li>
+                    <li>Внутриличностные конфликты</li>
+                    <li>Переживание травмы и ее последствия</li>
+                    <li>Переживание стресса, злости, обиды, страха, стыда и других чувств</li>
+                    <li>Самопознание, поиск собственного потенциала и новых ресурсов</li>
+                    <li>Обретение собственной ценности, уверенности в себе</li>
+                    <li>Семейные пары с нарушенной коммуникацией, ревность, измена в паре</li>
+                    <li>Трудности в эмоциональной сфере</li>
+                    <li>Социальная тревожность, неуверенность в себе, страх выступать публично, страх ошибок, отвержения и т.п.</li>
+                    <li>Проблемы с личными границами: неумение отказывать, отстаивать себя</li>
+                    <li>Сопровождение тяжело-больных людей и/или членов их семей</li>
+                    <li>Сложности проживания возрастных кризисов</li>
+                  </ul>
+                  <div class="about__list-title">С чем я не работаю:</div>
+                  <ul class="about__list">
+                    <li>Нарушения из области психиатрии </li>
+                    <li>Расстройство пищевого поведения </li>
+                    <li>Возраст до 18 лет</li>
+                  </ul>
+                </div>
+                <button class="expandButton">Показать остальное...</button>
               </div>
           </section>
-          <section class="services">
+          <section id="services" class="services">
             <h2 class="services__title">Услуги</h2>
-            <div class="services__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga commodi, aut nulla iusto qui voluptates blanditiis dolore maiores praesentium quaerat quod ullam soluta aperiam accusantium! In excepturi veritatis deleniti voluptas?</div>
+            <!-- <div class="services__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga commodi, aut nulla iusto qui voluptates blanditiis dolore maiores praesentium quaerat quod ullam soluta aperiam accusantium! In excepturi veritatis deleniti voluptas?</div> -->
             <div class="services__wrapper">
               <div class="service">
-                <h4 class="service__title">Сексология</h4>
-                <p class="service__description">Научная дисциплина, изучающая все проявления сексуальности человека, включая как попытки охарактеризовать нормальную</p>
+                <h4 class="service__title">Индивидуальная консультация (50 минут)</h4>
+                <p class="service__description">Индивидуальная форма работы с психологом, направленная на повышение качества жизни</p>
               </div>
               <div class="service">
-                <h4 class="service__title">Сексология</h4>
-                <p class="service__description">Научная дисциплина, изучающая все проявления сексуальности человека, включая как попытки охарактеризовать нормальную</p>
-              </div>
-              <div class="service">
-                <h4 class="service__title">Сексология</h4>
-                <p class="service__description">Научная дисциплина, изучающая все проявления сексуальности человека, включая как попытки охарактеризовать нормальную</p>
-              </div>
-              <div class="service">
-                <h4 class="service__title">Сексология</h4>
-                <p class="service__description">Научная дисциплина, изучающая все проявления сексуальности человека, включая как попытки охарактеризовать нормальную</p>
-              </div>
-              <div class="service">
-                <h4 class="service__title">Сексология</h4>
-                <p class="service__description">Научная дисциплина, изучающая все проявления сексуальности человека, включая как попытки охарактеризовать нормальную</p>
-              </div>
-              <div class="service">
-                <h4 class="service__title">Сексология</h4>
-                <p class="service__description">Научная дисциплина, изучающая все проявления сексуальности человека, включая как попытки охарактеризовать нормальную</p>
+                <h4 class="service__title">Семейная консультация (80 минут)</h4>
+                <p class="service__description">Направление в психотерапии и психологии, которое нацелено на оказание психологической помощи семейным парам, детям и родителям, братьям и сестрам улучшить отношения, разрешить кризисы, создать органичную семью</p>
               </div>
             </div>
           </section>
-          <section class="pay">
+          <section id="pay" class="pay">
             <div class="pay_card">
               <h2 class="pay_title">СВОБОДНЫЙ ПЛАТЕЖ</h2>
               <p class="pay_description">Необходимо ввести сумму по договору в белорусских рублях</p>
@@ -72,21 +81,21 @@
             </div>
           </section>
       </main>
-      <footer class="footer">
+      <footer id="footer" class="footer">
         <div>
           <h3 class="footer__title">Реквизиты</h3>
           <ul>
             <li>ИП Шапкова Ирина Сергеевна</li>
-            <li>УНП 491644737</li>
-            <li>Свидетельство о госрегистрации № 0868118, выдано 02.04.2024 г., Администрацией Центрального района города Гомеля</li>
-            <li>Юр. адрес: 246000, Республика Беларусь, г. Гомель, ул. Жарковского 13-17</li>
+            <li>УНП 691650631</li>
+            <li>Свидетельство о государственной регистрации N0917695, выдано 17.03.2025г.</li>
+            <li>Юр.адрес: 220028, Республика Беларусь, г.Минск, ул. Маяковского, 140-126</li>
           </ul>
         </div>
         <div>
           <h3 class="footer__title">Контакты</h3>
           <ul>
-            <li>Телефон: +375 44 774-29-98</li>
-            <li>E-mail: krupskii_ptr@mail.ru</li>
+            <li>Телефон: +375 29 659-26-96</li>
+            <li>E-mail: shapuletta@mail.ru</li>
           </ul>
         </div>
       </footer>

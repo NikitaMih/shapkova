@@ -5,6 +5,12 @@
     scroll-behavior: smooth;
 }
 
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 html {
   font-family: 'Roboto', sans-serif !important;
 }
@@ -188,12 +194,12 @@ html {
         justify-content: center;
         flex-wrap: wrap;
         gap: 30px;
-        width: 800px;
+        max-width: 1440px;
     }
 }
 
 .service {
-    width: 380px;
+    width: 500px;
     padding: 40px;
     background-color: #8ab3d1;
     border-radius: 6px;
@@ -244,11 +250,11 @@ html {
 
     &_link {
         padding: 10px 16px;
-        background-color: #557A95;
+        background-color: #5d5c61;
         font-size: 24px;
-        font-weight: 500px;
+        font-weight: 700px;
         border: none;
-        border-radius: 4px;
+        border-radius: 8px;
         color: white;
         text-align: center;
         text-transform: uppercase;
@@ -256,10 +262,64 @@ html {
         height: 52px;
         width: 100%;
         transition: all ease 0.3s;
+        margin-top: 30px;
+        max-width: 300px;
 
         &:hover {
             background-color: #46647a;
         }
+    }
+}
+
+.contasts {
+    @include flexCenter();
+    flex-direction: column;
+    padding: 100px 0;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    &__title {
+        font-size: 28px;
+        font-weight: 500;
+        max-width: 1000px;
+        text-align: center;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 40px;
+    }
+
+    img {
+        height: 28px;
+        width: 28px;  
+    }
+
+    &__telegram {
+        @include flexCenter();
+        border-radius: 6px;
+        background-color: #1d98dc;
+        width: 200px;
+        height: 48px;
+    }
+
+    &__viber {
+        @include flexCenter();
+        border-radius: 6px;
+        background-color: #7360f2;
+        width: 200px;
+        height: 48px;
+    }
+
+    &__instagram {
+        @include flexCenter();
+        border-radius: 6px;
+        background-color: #C13584;
+        width: 200px;
+        height: 48px;
     }
 }
 
@@ -449,6 +509,50 @@ html {
     }
 }
 
+@media (max-width: 768px) {
+    .contasts {
+        padding: 60px 20px; /* Adjust padding for smaller screens */
+
+        &__title {
+            font-size: 22px; /* Reduce title size */
+            max-width: 100%; /* Allow title to take full width */
+        }
+
+        &__wrapper {
+            flex-direction: column; /* Stack contact methods vertically */
+            align-items: center; /* Center items horizontally */
+            padding-top: 20px;
+        }
+
+        &__telegram,
+        &__viber,
+        &__instagram {
+            width: 100%; /* Contact methods take full width */
+            max-width: 300px; /* Limit width on larger mobile screens */
+        }
+
+        img {
+            height: 24px; /* Reduce image size */
+            width: 24px;
+        }
+    }
+}
+
+/* Smaller Mobile Devices */
+@media (max-width: 480px) {
+    .contasts {
+        &__title {
+            font-size: 18px; /* Further reduce title size */
+        }
+
+        &__telegram,
+        &__viber,
+        &__instagram {
+          width: 300px;
+          height: 40px; /* Further reduce height on small devices */
+        }
+    }
+}
 
 @media (max-width: 768px) {
     .footer {

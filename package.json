@@ -1,17 +1,23 @@
 {
-  "name": "shapkova",
-  "private": true,
-  "version": "0.0.0",
+  "name": "webpack_example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "vite",
+    "build": "cross-env BUILD_TYPE=dev vite build",
+    "serve": "vite preview --port 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "vite": "^6.2.0"
-  },
-  "dependencies": {
-    "sass": "^1.86.0"
+    "@vitejs/plugin-legacy": "5.4.2",
+    "cross-env": "7.0.3",
+    "sass": "1.79.5",
+    "vite": "5.4.8",
+    "vite-aliases": "0.10.0"
   }
 }

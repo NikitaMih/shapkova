@@ -272,6 +272,91 @@ html {
     }
 }
 
+.information {
+    padding: 50px 200px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background-color: #5d5c61;
+
+    p {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 16px;
+        line-height: 1.4;
+    }
+
+    &__title {
+        color: #ffffff;
+        font-size: 45px;
+        line-height: 1.55;
+        font-weight: 500;
+        margin-bottom: 28px;
+        text-align: center;
+    }
+
+    &__section {
+        display: flex;
+        gap: 80px;
+        justify-content: center;
+    }
+
+    &__block {
+        width: 400px;
+    }
+
+    &__subtitle {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 300;
+        text-decoration: underline;
+        text-underline-offset: 20px;
+        white-space: nowrap;
+        margin-bottom: 40px
+    }
+
+    &__list {
+        li {
+            color: #ffffff;
+            line-height: 1.4;
+            font-size: 20px;
+            font-weight: 400;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            list-style-type: disc;
+        }
+    }
+
+    @media (max-width: 768px) { // Adjust the breakpoint as needed
+        padding: 20px; // Reduce padding
+        box-shadow: none; // remove box-shadow
+
+        &__title {
+            font-size: 28px; // Reduce title font size
+            margin-bottom: 20px;
+        }
+
+        &__section {
+            flex-direction: column; // Stack blocks vertically
+            gap: 40px; // Reduce gap between blocks
+            align-items: center; // Center blocks horizontally
+        }
+
+        &__block {
+            width: 90%; // Full width or nearly full width
+        }
+
+        &__subtitle {
+            font-size: 20px; // Reduce subtitle font size
+            margin-bottom: 30px;
+        }
+
+        p,
+        &__list li {
+            font-size: 16px; // Reduce paragraph and list item font size
+        }
+    }
+}
+
 .contasts {
     @include flexCenter();
     flex-direction: column;

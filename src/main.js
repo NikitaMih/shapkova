@@ -10,10 +10,15 @@ export function setupCounter(element) {
     setCounter(0)
   }
   
-  const expandableList = document.querySelector('.about__list-block');
-  const expandButton = document.querySelector('.expandButton');
-  
+const expandableList = document.querySelector('.about__list-block');
+const expandButton = document.querySelector('.expandButton');
+
+if (expandableList && expandButton) {
   expandButton.addEventListener('click', () => {
     expandableList.classList.toggle('expanded');
-    expandButton.textContent = expandableList.classList.contains('expanded') ? 'Скрыть мои услуги' : 'Показать остальное...';
-});
+
+    const isExpanded = expandableList.classList.contains('expanded');
+    expandButton.textContent = isExpanded ? 'Скрыть мои услуги' : 'Показать остальное...';
+    expandButton.setAttribute('aria-expanded', String(isExpanded));
+  });
+}
